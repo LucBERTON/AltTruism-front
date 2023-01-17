@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import TopNavigationbar from "../../components/TopNavigationbar/TopNavigationbar";
 import colors from "../../utils/style/colors";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 const HomeWrapper = styled.div`
 	display: flex;
@@ -18,14 +20,20 @@ const HomeContainer = styled.div`
 	max-width: 1200px;
 `;
 
+const MainPage = styled.div`
+	display: flex;
+	flex-direction: row;
+`;
+
 const Home = () => {
 	return (
 		<HomeWrapper>
 			<HomeContainer theme="light">
 				<TopNavigationbar />
-				<div>
+				<MainPage>
 					<h1>Main Page</h1>
-				</div>
+					<FontAwesomeIcon icon={faHeart} />
+				</MainPage>
 			</HomeContainer>
 		</HomeWrapper>
 	);
